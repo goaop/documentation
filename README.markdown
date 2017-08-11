@@ -1,5 +1,5 @@
-Go! Aspect-Oriented Framework for PHP documentation
-===================================================
+Documentation for Go! Aspect-Oriented Framework and related projects
+====================================================================
 
 **\[WORK IN PROGRESS\]**
 
