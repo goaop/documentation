@@ -1,6 +1,8 @@
 Go! Aspect-Oriented Framework for PHP documentation
 ===================================================
 
+**\[WORK IN PROGRESS\]**
+
 This repository contains documentation for Go! AOP framework and related
 projects:
 
