@@ -51,6 +51,8 @@
     <link rel="stylesheet" href="{{ pathto(cssfile, 1) }}" type="text/css" />
   {% endfor %}
 
+  <link rel="stylesheet" href="{{ pathto('_static/css/theme.css', 1) }}" type="text/css"/>
+
   {%- block linktags %}
     {%- if hasdoc('about') %}
         <link rel="author" title="{{ _('About these documents') }}"
@@ -131,7 +133,7 @@
               toctree is empty. Skip building this for now.
             #}
             {% if 'singlehtml' not in builder %}
-              {% set global_toc = toctree(maxdepth=theme_navigation_depth|int, collapse=theme_collapse_navigation, includehidden=True) %}
+              {% set global_toc = toctree(maxdepth=10|int, collapse=theme_collapse_navigation, includehidden=True) %}
             {% endif %}
             {% if global_toc %}
               {{ global_toc }}

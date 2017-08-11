@@ -82,14 +82,12 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'go_aop_theme'
-html_theme_path = ["_themes", ]
+html_theme = 'basic'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
 # documentation.
-#
-# html_theme_options = {}
+# html_theme_options = {  }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -111,6 +109,9 @@ html_sidebars = {
     ]
 }
 
+html_show_copyright = False
+html_show_sphinx = False
+html_show_sourcelink = False
 
 # -- Options for HTMLHelp output ------------------------------------------
 
@@ -166,3 +167,6 @@ texinfo_documents = [
     (master_doc, 'Go! AOP documentation'),
 ]
 
+def setup(app):
+    app.add_stylesheet('css/theme.css')
+    app.add_javascript('js/theme.js')
