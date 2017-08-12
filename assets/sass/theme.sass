@@ -5,44 +5,43 @@
 // things you should edit are the sass files that start with
 // "theme_*.sass". All other files are loaded through bower.
 // ------------------------------------------------------------
-
 // Variable defaults set by Wyrm
-@import wyrm_core/wy_variables
+@import ~wyrm/sass/wyrm_core/wy_variables
 
 // Variable overrides that change coloring and fonts for this theme.
 @import theme_variables
 
 // bourbon.io framework
-@import bourbon
+@import ~bourbon/app/assets/stylesheets/_bourbon.scss
 
 // Bourbon.io/neat framework, with some default media queries
-@import wyrm_core/grid_settings
-@import neat
+@import grid_settings
+@import ~bourbon-neat/app/assets/stylesheets/_neat.scss
 // Some corrections for neat
-@import wyrm_core/neat_extra
+@import ~wyrm/sass/wyrm_core/neat_extra
 
 // Custom reset
-@import wyrm_core/reset
+@import ~wyrm/sass/wyrm_core/reset
 
 // Wyrm mixins
-@import wyrm_core/mixin
+@import ~wyrm/sass/wyrm_core/mixin
 
 // Font Awesome 4.0 with wyrm extras
-@import font-awesome
-@import wyrm_core/font_icon_defaults
+@import ~font-awesome/scss/font-awesome.scss
+@import ~wyrm/sass/wyrm_core/font_icon_defaults
 
 // Wyrm core styles used in this theme
-@import wyrm_core/alert
-@import wyrm_core/button
-@import wyrm_core/dropdown
-@import wyrm_core/form
-@import wyrm_core/generic
-@import wyrm_core/table
-@import wyrm_core/type
+@import ~wyrm/sass/wyrm_core/alert
+@import ~wyrm/sass/wyrm_core/button
+@import ~wyrm/sass/wyrm_core/dropdown
+@import ~wyrm/sass/wyrm_core/form
+@import ~wyrm/sass/wyrm_core/generic
+@import ~wyrm/sass/wyrm_core/table
+@import ~wyrm/sass/wyrm_core/type
 
 // Pygments styling
-@import wyrm_addons/pygments/pygments
-@import wyrm_addons/pygments/pygments_light
+@import ~wyrm/sass/wyrm_addons/pygments/pygments
+@import ~wyrm/sass/wyrm_addons/pygments/pygments_light
 
 // Theme specific styles. These are likely the files you want to edit.
 @import theme_breadcrumbs

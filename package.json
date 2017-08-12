@@ -1,0 +1,37 @@
+{
+  "name": "go-aop-documentation",
+  "version": "1.0.0",
+  "description": "Documentation for Go! Aspect-Oriented Framework and related projects",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goaop/documentation.git"
+  },
+  "keywords": [
+    "Go! AOP documentation",
+    "PHP AOP documentation",
+    "Aspect Oriented Programing"
+  ],
+  "author": "Alexander Lisachenko, lisachenko.it@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/goaop/documentation/issues"
+  },
+  "homepage": "https://github.com/goaop/documentation",
+  "dependencies": {
+    "@symfony/webpack-encore": "^0.13.0",
+    "ajv": "^5.2.2",
+    "bourbon": "^4.3.4",
+    "bourbon-neat": "^1.9.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "modernizr-webpack-plugin": "^1.0.6",
+    "node-sass": "^4.5.3",
+    "resolve-url-loader": "^2.1.0",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.4",
+    "wyrm": "^1.0.9"
+  }
+}

@@ -1,4 +1,4 @@
-var jQuery = (typeof(window) != 'undefined') ? window.jQuery : require('jquery');
+var jQuery = require('jquery');
 
 // Sphinx theme nav state
 function ThemeNav () {

@@ -6,8 +6,8 @@ Welcome to Go! AOP documentation
    :name: mastertoc
    :maxdepth: 1
 
-   about_aop/introduction_to_aop
-   installation/index
+   articles/about_aop/introduction_to_aop
+   articles/installation/index
 
 
 
