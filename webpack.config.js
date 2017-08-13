@@ -1,5 +1,6 @@
 const Encore = require('@symfony/webpack-encore');
 const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 Encore
     .setOutputPath('_static/')
@@ -15,6 +16,9 @@ Encore
 var config = Encore.getWebpackConfig();
 
 config.plugins = [].concat(config.plugins, [
+    new CopyWebpackPlugin([
+        { from: './assets/favicon', to: 'favicon' },
+    ], {}),
     new ModernizrWebpackPlugin({
         'feature-detects': [
             'applicationcache',
