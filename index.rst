@@ -8,6 +8,7 @@ Welcome to Go! AOP documentation
 
    articles/about_aop/introduction_to_aop
    articles/installation/index
+   articles/pointcuts_and_advices/index
 
 
 
