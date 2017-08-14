@@ -1,5 +1,5 @@
-Code sample
-===========
+Pointcuts and advices
+=====================
 
 .. code-block:: php
    :caption: somecode.php
