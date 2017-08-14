@@ -162,5 +162,5 @@ function ThemeNav () {
 module.exports.ThemeNav = ThemeNav();
 
 if (typeof(window) != 'undefined') {
-    window.SphinxRtdTheme = { StickyNav: module.exports.ThemeNav };
+    window.GoAopTheme = { StickyNav: module.exports.ThemeNav };
 }

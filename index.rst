@@ -10,11 +10,6 @@ Welcome to Go! AOP documentation
    articles/installation/index
    articles/pointcuts_and_advices/index
 
+:ref:`genindex`
 
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
