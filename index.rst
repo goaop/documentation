@@ -1,6 +1,19 @@
 Welcome to Go! AOP documentation
 ================================
 
+Go! AOP is framework written in PHP which enables support for aspect oriented programming (AOP) in your PHP project. As you
+may already know, PHP does not supports AOP natively, and starting from PHP 5.5, AOP is not even available trough
+PHP extension.
+
+In that matter, purpose of this library is to provide PHP developers with powerful development tool in form of aspect
+oriented programing trough userland library that can be used in almost every environment, regardless of the fact whether
+some framework is used in project or not.
+
+Go! AOP is tightly coupled with Composer_, so that is important library requirement: autoloading of PHP classes must be
+done trough Composer.
+
+.. _Composer: https://getcomposer.org
+
 .. toctree::
    :caption: Table of Contents
    :name: mastertoc
@@ -14,5 +27,3 @@ Welcome to Go! AOP documentation
    articles/references_and_resources/index
 
 :ref:`genindex`
-
-
