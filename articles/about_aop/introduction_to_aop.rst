@@ -1,23 +1,22 @@
 .. index::
    single: About Aspect Oriented programming (AOP)
 
-Introduction to AOP
-===================
+Introduction to aspect oriented programming (AOP)
+=================================================
+
+Purpose of this chapter is to give you a brief introduction to aspect oriented programing as well as some theoretical
+background and practical examples of its usage in solving real life problems. It is advisable to read this chapter,
+regardless if you are familiar with aspect oriented programming paradigm or not. If you are familiar with AOP and have
+some experience with it, it will remind you of important features and concepts in AOP. On the other hand, of you are not
+(and most PHP developers aren't since AOP is not natively supported) it can provide you with neccessary basis for
+successful implementation of AOP concepts into your project.
 
 .. toctree::
+   :caption: Read more
    :maxdepth: 1
 
+   definition.rst
+   motivation_for_aop.rst
    glossary.rst
    types_of_advices.rst
 
-The motivation for Go! (and likewise for aspect-oriented programming) is the realization that there are issues or
-concerns that are not well captured by traditional programming methodologies. Consider the problem of enforcing a
-security policy in some application. By its nature, security cuts across many of the natural units of modularity of
-the application. Moreover, the security policy must be uniformly applied to any additions as the application evolves.
-And the security policy that is being applied might itself evolve. Capturing concerns like a security policy in a
-disciplined way is difficult and error-prone in a traditional programming language.
-
-Concerns like security cut across the natural units of modularity. For PHP the natural unit of modularity is the class.
-But in PHP crosscutting concerns are not easily turned into classes precisely because they cut across classes,
-and so these aren’t reusable, they can’t be refined or inherited, they are spread through out the program in an
-undisciplined way, in short, they are difficult to work with.

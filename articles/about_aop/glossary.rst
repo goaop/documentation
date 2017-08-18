@@ -28,7 +28,7 @@ Pointcut
 A regular expression that matches join points. Advice is associated with a pointcut expression and runs at any join
 point matched by the pointcut (for example, the execution of a method with a certain name).
 
-Introduction (Also known as an inter-type declaration)
+Introduction (also known as an inter-type declaration)
 ------------------------------------------------------
 
 Go! allows you to introduce new interfaces (and a corresponding implementation with trait) to any user-defined class.
