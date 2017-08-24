@@ -12,7 +12,11 @@ some framework is used in project or not.
 Go! AOP is tightly coupled with Composer_, so that is important library requirement: autoloading of PHP classes must be
 done trough Composer.
 
+This library was inspired by `Lithium PHP framework`_ and later on, by Spring_ framework for Java.
+
 .. _Composer: https://getcomposer.org
+.. _`Lithium PHP framework`: http://li3.me
+.. _Spring: https://spring.io
 
 .. toctree::
    :caption: Table of Contents
