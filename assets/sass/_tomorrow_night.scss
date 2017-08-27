@@ -1,3 +1,4 @@
+div[class^='highlight'] pre { color: #fff; }
 .highlight  { background: #1d1f21; color: #c5c8c6 }
 .highlight .hll { background-color: #373b41 }
 .highlight .c { color: #969896 } /* Comment */
@@ -64,3 +65,10 @@
 .highlight .vi { color: #cc6666 } /* Name.Variable.Instance */
 .highlight .il { color: #de935f } /* Literal.Number.Integer.Long */
 .highlight .fm { color: #ffe3ad } /* Class constructor */
+.highlight-console .go:before {
+    content: "$";
+    display: block;
+    float: left;
+    margin-right: 5px;
+    color: #949494;
+}
