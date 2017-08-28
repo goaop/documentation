@@ -40,6 +40,9 @@ manage all aspects of your application in one place.
         }
     }
 
+Configuring framework
+~~~~~~~~~~~~~~~~~~~~~
+
 When you created your aspect kernel, you have to configure it and initialize it into your front controller.
 
 .. code-block:: php
