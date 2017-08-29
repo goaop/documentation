@@ -19,6 +19,24 @@ controllers.
 
 .. _singleton: https://en.wikipedia.org/wiki/Singleton_pattern
 
+Serialization/deserialization and reflections are sensitive to weaving
+----------------------------------------------------------------------
+
+As have been mentioned several times, Go! AOP executes code weaving in runtime by introducing proxy class. Proxy class
+adds additional level of inheritance of your class, and therefore, previous assumption on which
+serialization/deserialization and reflective code is built upon becomes wrong.
+
+This issue is elaborated in details here: :doc:`serialization-reflections-and-weaving` where you can find
+guidelines how to prevent possible issues in your code.
+
+ .. toctree::
+    :hidden:
+    :maxdepth: 1
+
+    serialization-reflections-and-weaving
+
+
+
 Known issues
 ~~~~~~~~~~~~
 
@@ -46,3 +64,4 @@ support. Namely, Go! AOP injects one level of inheritance level to entities trou
 metadata of entities. With proxy, mapped class properties are moved one level up to proxied classes.
 Current efforts to support weaving of Doctrine entities is focused on modifying metadata by introducing
 proxied classes as mapped superclasses. However, it is not stable yet and can not be used in production.
+
