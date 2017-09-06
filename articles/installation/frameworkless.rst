@@ -52,14 +52,14 @@ When you created your aspect kernel, you have to configure it and initialize it 
     <?php
 
     // First, include Composer's autoload script from your vendor directory
-    include __DIR__ . '/vendor/autoload.php';
+    include __DIR__ . '/../vendor/autoload.php';
 
     // Configure Go! AOP - see configuration references for more details and options
     $aopConfig = [
         'debug'     => true,
         'cacheDir'  => __DIR__ . '/../var/cache/aop',
         'appDir' => __DIR__ . '/../src/'
-    ]
+    ];
 
     // Create application aspect kernel
     $applicationAspectKernel = ApplicationAspectKernel::getInstance();
@@ -98,7 +98,7 @@ Aspect oriented development is based on aspects and pointcuts, so in code bellow
     /**
      * My first aspect
      */
-    class MyFirstAspect extends AspectKernel
+    class MyFirstAspect implements Aspect
     {
 
         /**

@@ -160,7 +160,7 @@ Considering that you have, per example, following aspect:
     /**
      * Logs every successful method execution
      */
-    class LoggingAspect extends AspectKernel
+    class LoggingAspect implements Aspect
     {
         public function __construct(LoggerInterface $logger)
         {
