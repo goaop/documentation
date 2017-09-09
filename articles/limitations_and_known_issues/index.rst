@@ -35,7 +35,14 @@ guidelines how to prevent possible issues in your code.
 
     serialization-reflections-and-weaving
 
+Class weaving constrained to PSR-0 and PSR-4 compatible classes only
+--------------------------------------------------------------------
 
+Go! AOP supports only weaving of classes which are compatible with PSR-0_ and PSR-4_ autoloading, which means that there
+can be only one class per file.
+
+.. _PSR-0: http://www.php-fig.org/psr/psr-0
+.. _PSR-4: http://www.php-fig.org/psr/psr-4
 
 Known issues
 ~~~~~~~~~~~~

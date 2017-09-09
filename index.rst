@@ -25,6 +25,7 @@ This library was inspired by `Lithium PHP framework`_ and later on, by Spring_ f
 
    articles/about_aop/introduction_to_aop
    articles/installation/index
+   articles/using_go_aop/index
    articles/pointcuts_and_advices/index
    articles/internals/index
    articles/limitations_and_known_issues/index

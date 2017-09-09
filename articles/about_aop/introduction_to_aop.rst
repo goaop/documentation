@@ -18,5 +18,4 @@ successful implementation of AOP concepts into your project.
    definition.rst
    motivation_for_aop.rst
    glossary.rst
-   types_of_advices.rst
 
