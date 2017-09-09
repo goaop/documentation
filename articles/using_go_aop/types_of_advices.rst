@@ -5,8 +5,8 @@ Types of advices
 ================
 
 In aspect oriented programming, pointcut answers on question which operation (method, function, initialization, etc.),
-that is, answers on question "**what** do you want to intercept?". On the other hand, advice defines **how**
-do you want to intercept, that is, specifies the point of invocation which should be intercepted.
+that is, answers on question "**what do you want to intercept?**". On the other hand, advice defines "**how do you want
+to intercept"**, that is, specifies the particular point of method invocation which should be intercepted.
 
 Consider image below. It shows method invocation lifecycle, from its start to end. When method is invoked, the result
 of invocation can be either successful (it returns some value, or exists returning nothing, a *void*), or
