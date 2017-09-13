@@ -5,3 +5,4 @@ Using Go! AOP
    :maxdepth: 1
 
    types_of_advices
+   pointcut_syntax
