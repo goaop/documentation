@@ -12,8 +12,8 @@ AOP does not diverts from standards established by AspectJ, so any developer fam
 itself within familiar grounds when working with Go! AOP.
 
 However, there are certain differences, possibilities as well as limitations within PHP language itself. Go! AOP had to
-take into consideration those differences when adopting AspectJ standard. Differences in implementation are noted in
-pointcut syntax overview.
+take into consideration those differences when adopting AspectJ standard.
+
 
 Methods and Constructors
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -22,15 +22,48 @@ You may intercept every ``public`` and/or ``protected`` method of class, as well
 method with specific properties, of course (it is invoked at class initialization and it does not returns value). Subject
 of interception can be static class method as well.
 
-Pointcut expression pattern is: ``execution([public|private] [CLASS_NAME_FILTER][::|->][METHOD_NAME_FILTER](*))``
+Pointcut expression pattern is: ``execution([VISIBILITY_MODIFIER] [CLASS_NAME_FILTER][TYPE_OF_INVOCATION][METHOD_NAME_FILTER](*))``
 
-- ``execution`` keyword denotes that class method is subject of interception.
-- ``[public|private]`` denotes method visibility modifier. You may use any of those modifiers, or you may use
-  logical "or" (``|``) operator to denote both.
-- ``[CLASS_NAME_FILTER]`` allows you to specify regular expression which will be used to match full qualified class name
-  which ought to be intercepted.
+- ``execution`` keyword denotes that class method (class method or static class method) is subject of interception.
+- With ``[VISIBILITY_MODIFIER]`` you may denote method visibility modifier. Go! AOP supports interceptions of ``public``
+  and ``protected`` methods. If you want to intercept both ``public`` as well as ``protected`` methods, you may
+  use "pipe" (``|``) operator to denote both, in example: ``public|protected``.
+- ``[CLASS_NAME_FILTER]`` allows you to specify expression that will be used to match full qualified class name
+  which ought to be intercepted. Expression wildcards which can be used for namespace matching are simplified and limited,
+  however, sufficient enough for everyday usage:
+    - ``*`` (astrix, star) matches any character and digit in namespace part. Its regular expression equivalent is ``[^\\\\]+``
+      which matches any character as many time as possible between namespace separators (``\`` - backslash).
+    - ``**`` (double astrix) matches any namespace. Its regular expression equivalent is ``.+`` which matches any character
+      as many times as possible.
+    - ``?`` (question mark) matches any single character. Its regular expression equivalent is ``.`` (dot) sign.
+    - ``|`` (pipe), which is logical ``or`` operator in this context. Its regular expression equivalent is pipe as well.
+- ``[TYPE_OF_INVOCATION]`` allows you to specify whether you are matching class method or static class method. It may
+  be ``::`` (*Paamayim Nekudotayim*) or ``->``. It is not possible to match booth class method and static class method
+  within the same expression.
+- ``[METHOD_NAME_FILTER]`` allows you to specify method name. Wildcards that can be used in method name matching are
+  ``*`` (astrix, star), ``?`` (question mark) and ``|`` (pipe) operator. They share same semantics with class name filter.
+- ``(*)`` is constant, static part of the expression, which matches any number, name and type of method arguments. AspectJ,
+  per example, supports matching based on method arguments as well. In Go! AOP, that is not possible.
+
+Examples
+--------
+
+- ``execution(public Example->method(*))`` - Every execution of public method with the name ``method`` in the class
+  ``Example``
+- ``execution(public Example->method1|method2(*))`` - Every execution of one of the public methods: ``method1`` or
+  ``method2`` in the class ``Example``
+- ``execution(public|protected Example\Aspect\*->method*(*))`` - Execution of public or protected methods that have
+  ``method`` prefix in their names and that methods are also within ``Example\Aspect`` sub-namespace. Note that only one,
+  single namespace part will be matched.
+- ``execution(public **::staticMethod(*))`` - Every execution of any public static method ``staticMethod`` in every
+  namespace (except global one).
+
+Annotations
+~~~~~~~~~~~
 
 
 
 
+Expressions and their logical combination
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
