@@ -58,9 +58,26 @@ Examples
 - ``execution(public **::staticMethod(*))`` - Every execution of any public static method ``staticMethod`` in every
   namespace (except global one).
 
-Annotations
-~~~~~~~~~~~
+Methods via annotations
+~~~~~~~~~~~~~~~~~~~~~~~
 
+Annotations are another way to intercept any protected and/or public class method, as well as static class method.
+Pointcut expression pattern is: ``@execution([ANNOTATION_FULL_QUALIFIED_CLASS_NAME])``. Note that wildcards are not
+supported.
+
+Examples
+--------
+
+- ``@execution(Demo\Annotation\Cacheable)`` - Every execution of any method that has ``Demo\Annotation\Cacheable``
+annotation in its docBlock.
+
+Property access
+~~~~~~~~~~~~~~~
+
+Access to public and protected class properties may be intercepted as well. Note that static class properties interception
+is not supported.
+
+Pointcut expression pattern is: ``execution([VISIBILITY_MODIFIER] [CLASS_NAME_FILTER]->[PROPERTY_NAME_FILTER])``
 
 
 
