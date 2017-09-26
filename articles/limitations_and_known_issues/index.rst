@@ -44,6 +44,16 @@ can be only one class per file.
 .. _PSR-0: http://www.php-fig.org/psr/psr-0
 .. _PSR-4: http://www.php-fig.org/psr/psr-4
 
+Interception of system functions is sensitive to namespace prefixing
+--------------------------------------------------------------------
+
+Go! AOP supports interception and weaving of system functions, however, it is only possible if functions are referenced
+without namespace prefix. That means that, per example, it is possible to intercept ``array_merge()`` function, if
+function is used like stated above. However, if namespace prefix is used, per example ``\array_merge()``, interception
+of same function is not possible.
+
+However, developers almost never prefixes system functions with default namespace.
+
 Known issues
 ~~~~~~~~~~~~
 
