@@ -42,4 +42,5 @@ Depending on your project, read about further steps in order to configure Go! AO
    Configuring Symfony <symfony>
    Configuring Laravel <laravel>
    Configuring Zend <zend>
+   Configuring Yii <yii>
    configuration-references
