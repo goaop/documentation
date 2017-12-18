@@ -1,3 +1,5 @@
+.. _installation_configuration_references:
+
 Configuration references
 ========================
 
@@ -20,6 +22,18 @@ Configuration references
 - ``containerClass``: Optional, string. Full qualified class name of aspect container implementation, that is,
   implementation of ``Go\Core\Container``. If not provided, ``Go\Core\GoAspectContainer`` is used by default. Its
   intention is to allow you to provide your own implementation of aspect container, or modified version of default one.
+- ``features``: Optional, integer, default ``0``. Binary mask of included features. Feature supported by Go! AOP are
+  defined within ``Go\Aop\Features`` interface:
+
+      - ``Go\Aop\Features::INTERCEPT_FUNCTIONS`` - Enables interception of functions. This feature can have noticeable
+        impact on performances of weaving.
+      - ``Go\Aop\Features::INTERCEPT_INITIALIZATIONS`` - This feature enables interception of "new" operator in the
+        source code. As function interception, this feature might have noticeable impact on performances of weaving.
+      - ``Go\Aop\Features::INTERCEPT_INCLUDES`` - Enables interception of ``include`` and ``require`` operators in legacy
+        code. It's usage is depreciated and support might be dropped in the future. Use Composer for autoloading classes
+        instead.
+      - ``Go\Aop\Features::PREBUILT_CACHE`` - Useful within read-only filesystem, denotes that classes are already weaved
+        and class cache is already built.
 
 Annotation cache
 ----------------

@@ -8,6 +8,11 @@ With Go! AOP, you may intercept object initialization. Pointcut expression patte
 - ``[FULL_QUALIFIED_CLASS_NAME_FILTER]`` allows you to specify expression that will be used to match name of class which
   initialization ought to be intercepted.
 
+Have in mind that interceptions of class initialization can have noticeable impact on weaving performance since it requires
+scanning and analysing source code of every class which is within configured source/include directory. Therefore, this feature is
+disabled by default. You have to configure your aspect kernel to include this feature. For details see:
+:ref:`installation_configuration_references`.
+
 Static initialization
 ~~~~~~~~~~~~~~~~~~~~~
 

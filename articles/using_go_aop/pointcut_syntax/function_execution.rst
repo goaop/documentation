@@ -12,6 +12,11 @@ Pointcut expression pattern is ``execution([NAMESPACE_FILTER]\[FUNCTION_NAME_FIL
 - ``[FUNCTION_NAME_FILTER]`` allows you to specify expression that will be used to match system function name which will be intercepted.
 - ``(*)`` is constant, static part of the expression, which matches any number, name and type of method arguments.
 
+Have in mind that interceptions of functions can have noticeable impact on weaving performance since it requires scanning
+and analysing source code of every class which is within configured source/include directory. Therefore, this feature is
+disabled by default. You have to configure your aspect kernel to include this feature. For details see:
+:ref:`installation_configuration_references`.
+
 Examples
 --------
 

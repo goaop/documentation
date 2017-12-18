@@ -12,7 +12,8 @@ projects:
 - Zend 2 module: [https://github.com/goaop/goaop-zf2-module](https://github.com/goaop/goaop-zf2-module)
 - IDEA plugin (PHPStorm, IntelliJ): [https://github.com/goaop/idea-plugin](https://github.com/goaop/idea-plugin)
 
-To see documentation, go to [http://go.aopphp.com/docs](http://go.aopphp.com/docs)
+To see current, development version of this documentation, go to
+[http://go-aop-php.readthedocs.io/en/dev/](http://go-aop-php.readthedocs.io/en/dev/)
 where this documentation is rendered online.
 
 # Building documentation
