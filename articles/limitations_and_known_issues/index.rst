@@ -69,7 +69,12 @@ Weaving of classes/functions from PHAR archive
 
 Although this might be supported in future, for now, it is not possible. However, this is not in priority list, almost
 every library that is available as PHAR archive is available via Composer as well. If you need weaving of those classes,
-use Composer to acquire library code, not PHAR archive.
+use Composer to acquire library source code, not PHAR archive.
+
+Common occurrence of this limitation is when, per example, PHPUnit is being used as PHAR archive in project for unit
+tests, and directory where test classes residue are not excluded from weaving. If you do not need weaving of your unit
+tests, it is much wiser to exclude tests from weaving (see :ref:`installation_configuration_references`) rather than
+include source code of above mentioned PHPUnit library.
 
 .. _limitations-and-known-issues-weaving-of-doctrine-entities:
 
