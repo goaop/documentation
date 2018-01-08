@@ -34,6 +34,10 @@ Configuration references
         instead.
       - ``Go\Aop\Features::PREBUILT_CACHE`` - Useful within read-only filesystem, denotes that classes are already weaved
         and class cache is already built.
+      - ``Go\Aop\Features::PARAMETER_WIDENING`` - This feature will instruct weaving engine to skip type declarations
+        when generating weaved methods. That would allow you, per example, to easily implement adapter pattern. However,
+        do note that **this feature is only available for PHP of version 7.2.0 or higher**. For details, see:
+        `https://wiki.php.net/rfc/parameter-no-type-variance<https://wiki.php.net/rfc/parameter-no-type-variance>`_.
 
 Annotation cache
 ----------------
